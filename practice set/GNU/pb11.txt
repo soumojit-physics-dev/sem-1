@@ -1,0 +1,17 @@
+set terminal pdfcairo
+set output "black.pdf"
+
+set title "black body reaction"
+set xlabel "X"
+set ylabel "f(x)"
+set xrange [0:2]
+set samples 800
+
+a = 1000
+f(x,b) = (a*x**3)/(exp(b*x)-1)
+
+plot f(x,8) title "b=8" lw 1 lc 1,\
+f(x,9) title "b=9" lw 2 lc 2,\
+f(x,10) title "b=10" lw 3 lc 3
+set output
+

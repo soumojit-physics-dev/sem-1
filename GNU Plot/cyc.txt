@@ -1,0 +1,21 @@
+#making a cycloid 
+
+set terminal pdfcairo
+set output "cycloid.pdf"
+
+set title "CYCLOID"
+set xlabel "X"
+set ylabel "Y"
+
+set grid 
+set xtics 1.5
+set ytics 0.5
+
+r=3.0
+
+set parametric
+set trange[0:4*pi]
+
+plot r*(t-sin(t)),r*(1-cos(t)) title "CYCLOID" lw 2 lc 2
+set output 
+

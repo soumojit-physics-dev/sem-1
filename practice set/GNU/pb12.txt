@@ -1,0 +1,17 @@
+f(x) = (x<0) ? (x*sin(x)) : (x>=0 && x<=pi/2) ? (x+sin(x)) : (cos(x)+x+1)
+
+set terminal pdf 
+set output "conti.pdf"
+
+set title "continuous"
+set xlabel "X"
+set ylabel "Y"
+ 
+set xrange [-pi:pi]
+set yrange [-pi:2*pi]
+
+set samples 800
+
+plot f(x) title "continuity" lw 2 lc 9
+set output
+

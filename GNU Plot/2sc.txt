@@ -1,0 +1,17 @@
+set terminal pdfcairo
+set output "2*sin(x)*cos(x).pdf"
+
+set xrange[0:2*pi]
+set yrange[0:1]
+
+set xtics pi/10
+set ytics 0.1
+
+set xlabel "X (radians)"
+set ylabel "Y"
+
+set title "plot of 2*sin(x)*cos(x)"
+plot 2*sin(x)*cos(x) title "2*sin(x)*cos(x)" lw 2 lc 2
+
+set output
+

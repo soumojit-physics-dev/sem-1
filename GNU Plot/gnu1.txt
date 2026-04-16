@@ -1,0 +1,14 @@
+set terminal pdfcairo
+set output "plo1.pdf"
+
+set polar 
+set title "sin(t/4) plot"
+ 
+set trange [0:2*pi]
+set rrange [0:1]
+set grid polar pi/10
+set rtics 0.1
+
+plot sin(t/4) title " plotinng sin(t/4)" lw 2 lc 2 
+set output
+

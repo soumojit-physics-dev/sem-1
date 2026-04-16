@@ -1,0 +1,12 @@
+#OUTPUT>MODE>RANGE>GRID>DECORATION>PLOT
+
+set terminal pdfcairo
+set output "sin.plot"
+set polar 
+set trange[0:2*pi]
+set rrange[0:1]
+set grid polar pi/10
+set title "r = sin(t/4)"
+plot sin(t/4) title "sin plot" lw 2 lc 1
+set output
+

@@ -1,0 +1,12 @@
+#output>mode>range>grid>decoration>plot
+
+set terminal pdfcairo 
+set output "cos.pdf"
+set polar
+set trange [0:2*pi]
+set rrange [0:1]
+set grid polar pi/10
+set title "r = cos(t/4)"
+plot cos(t/4) title "cos plot" lw 2 lc 2
+set output
+

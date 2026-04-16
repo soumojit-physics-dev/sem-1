@@ -1,0 +1,15 @@
+set terminal pdfcairo
+set output "paramatric1.pdf"
+
+set parametric 
+
+set title "parametric plot"
+set trange [-1:1]
+set samples 800
+
+x(t) = exp(0.5)*cos((pi*t)/4) + cos(2*pi*t) 
+y(t) = 0.5*exp(1/3)*sin(pi*t) + sin(2*pi*t)
+
+plot x(t) , y(t) title "curves"
+set output 
+

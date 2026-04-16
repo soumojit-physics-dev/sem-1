@@ -1,0 +1,12 @@
+set terminal pdfcairo 
+set output "mitiple.pdf"
+
+set title "Functions plots"
+set xlabel "X"
+set ylabel "f(x)"
+
+set samples 800
+
+plot sin(x)*exp(-x) title "f(x1)" lw 2 lc 1 ,\
+x*cos(x) title "f(x2)" lw 3 lc 2 ,\
+x**2*sin(x) title "f(x3)" lw 1 lc 3 

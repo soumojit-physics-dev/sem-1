@@ -1,0 +1,15 @@
+#parametric equation 
+
+set terminal pdfcairo 
+set output "ellipse.pdf"
+set parametric 
+set title "ellipse"
+set xtics 0.5
+set ytics 0.25
+set grid
+set trange[0:2*pi]
+a=2.0
+b=1.0
+plot a*sin(t) , b*cos(t) title "ellipse" lw 2 lc 2
+set output
+

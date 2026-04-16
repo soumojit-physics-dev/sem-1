@@ -1,0 +1,22 @@
+set terminal pdfcairo
+set output "function.pdf"
+
+f1(x) = (x>0.5) ? (1/x) : 1/0
+f2(x) = (x>-0.5) && x<0.5) ? (1/(x**2 + 1)) : 1/0
+f3(x) = (x<-0.5) ? (x**2) : 1/0
+
+set title "continuity"
+
+set xrange [-1.5:1.5]
+set yrange [0:3]
+set xlabel "X"
+set ylabel "f(x)"
+set ytics 0.5
+set samples 500
+
+plot f1(x) title "f1(x)" lw 1 lc 1,\
+f2(x) title "f2(x)" lw 2 lc 2,\
+f3(x) title "f3(x)" lw 3 lc 3
+set output 
+
+

@@ -1,0 +1,17 @@
+f(x)=x**a * sin(b*x)
+
+a = 1
+b = 1
+
+fit f(x) "data1.txt" using 1:2 via a,b
+
+set terminal pdfcairo
+set output "fitting.pdf"
+
+set title "Data fitting"
+set xlabel "X"
+set ylabel "Y"
+
+plot "data1.txt" using 1:2 with points title "data" ,\
+f(x) with lines title "fit"
+

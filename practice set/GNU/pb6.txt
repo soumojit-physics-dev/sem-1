@@ -1,0 +1,21 @@
+set terminal pdfcairo
+set output "fiting.pdf"
+
+f(x) = m*x + c
+
+m = 1
+c = 1
+
+fit f(x) "data2.txt" using 1:2 via m,c
+
+set title "Linear fit"
+set xrange [0:15]
+set xlabel "X"
+set ylabel "Y"
+
+plot "data2.txt" using 1:2 with points title "data",\
+f(x) with lines title "fit"
+
+set output
+
+

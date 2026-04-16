@@ -1,0 +1,13 @@
+#plot from data file 
+
+set terminal pdfcairo
+set output "data.pdf"
+
+set title "ploting"
+
+set xlabel "X"
+set ylabel "Y"
+
+plot "data.txt" using 1:2 with linespoints lw 2 lc 2 pt 7 title "data"
+set output
+

@@ -1,0 +1,17 @@
+f(x) = (x<=1)? 4/(x**2 +1) :(1<x<3)? (x**2 +1) :(2*x+4)
+
+set terminal pdf 
+set output "continuous.pdf"
+
+set title "continuous function"
+
+set xrange [-1:4]
+set yrange [-1:12]
+set xlabel "X"
+set ylabel "f(x)"
+
+set samples 500
+
+plot f(x) title "f(x)" lw 2 lc 2
+set output
+

@@ -1,0 +1,19 @@
+r1(t) = 2*t*sin(2*t) 
+r2(t) = 2*t*cos(2*t) 
+
+set terminal pdf
+set output "polar10.pdf"
+
+set polar 
+set angles radians 
+
+set samples 500
+
+set title "polar plots"
+set xlabel "th"
+set ylabel "r(th)"
+
+plot r1(t) title "r1" lw 1 lc 2,\
+r2(t) title "r2" lw 2 lc 5
+set output
+

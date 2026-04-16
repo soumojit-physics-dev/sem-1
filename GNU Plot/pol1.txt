@@ -1,0 +1,16 @@
+
+set terminal pdfcairo
+set output "pol1.pdf"
+
+set polar
+set angles radians 
+ 
+set trange[0:2*pi]
+set rrange[0:1]
+set grid polar pi/10
+set rtics 0.1
+
+set title "r = 0.5*(1-2*cos(t))"
+plot 0.5*(1-2*cos(t)) title " plotting cos func " lw 2 lc 2
+set output
+

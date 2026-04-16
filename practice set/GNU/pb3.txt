@@ -1,0 +1,16 @@
+set polar 
+set angles radians 
+
+set terminal pdf
+set output "polar1.pdf"
+
+set title "polar plots"
+
+set trange [-pi:pi]
+set xlabel "th"
+set ylabel "r(th)"
+
+set samples 800
+
+plot 2*sqrt(cos(t)) title "r1" lw 1 lc 1,\
+-2*sqrt(cos(t)) title "r2" lw 2 lc 2

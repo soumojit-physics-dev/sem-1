@@ -1,0 +1,26 @@
+f(x) = 2*x
+g(x) = x**2
+h(x) = x**3/4
+
+set terminal pdfcairo
+set output "diff.pdf"
+
+set title "plot of different powers of x "
+set xzeroaxis
+set yzeroaxis
+
+set xrange [-2:2]
+set yrange [-4:4]
+
+set xlabel "X values"
+set ylabel "Y values"
+
+plot f(x) title "f(x)" lw 1 lc 1,\
+g(x) title "g(x)" lw 2 lc 2,\
+h(x) title "h(x)" lw 3 lc 3
+
+set output
+
+
+
+

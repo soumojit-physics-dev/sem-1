@@ -1,0 +1,20 @@
+#
+
+set terminal pdfcairo
+set output "exp(sin(x)).pdf"
+
+set xrange[-3.0:3.0]
+set yrange[0:3]
+
+set xtics 0.5
+set ytics 0.2
+ 
+set xlabel "X (radians)"
+set ylabel "Y"
+ 
+set title "plot of exp(sin(x))"
+plot exp(sin(x)) title "exp(sin(x))" lw 2 lc 2
+
+set output
+
+

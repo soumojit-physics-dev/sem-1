@@ -1,0 +1,14 @@
+set terminal pdfcairo
+set output "plo2.pdf"
+
+set title "cos(t/4) plot"
+set polar 
+
+set trange [0:2*pi]
+set rrange [0:1]
+set grid polar pi/10
+set rtics 0.1
+
+plot cos(t/4) title "cos(t/4)" lw 2 lc 2
+set output
+
